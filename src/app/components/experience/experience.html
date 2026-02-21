@@ -1,0 +1,28 @@
+<section id="experience" class="section">
+    <div class="container">
+        <h2 class="section-title">Experience</h2>
+
+        <div class="timeline">
+            <div *ngFor="let exp of experience; let i = index" class="timeline-item" [class.current]="exp.current">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content card">
+                    <div class="timeline-header">
+                        <div>
+                            <h3 class="company">{{ exp.company }}</h3>
+                            <h4 class="position">{{ exp.position }}</h4>
+                        </div>
+                        <div class="timeline-meta">
+                            <span class="duration">{{ exp.duration }}</span>
+                            <span class="location">{{ exp.location }}</span>
+                            <span *ngIf="exp.current" class="current-badge">Current</span>
+                        </div>
+                    </div>
+
+                    <ul class="timeline-description">
+                        <li *ngFor="let item of exp.description">{{ item }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

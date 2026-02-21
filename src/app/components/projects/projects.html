@@ -1,0 +1,27 @@
+<section id="projects" class="section">
+    <div class="container">
+        <h2 class="section-title scroll-reveal" scrollReveal>Featured Projects</h2>
+
+        <div class="projects-grid">
+            <div *ngFor="let project of projects; let i = index" class="project-card card scroll-reveal hover-lift"
+                [class]="'stagger-' + (i + 1)" scrollReveal>
+                <div class="project-header">
+                    <h3 class="project-title">{{ project.title }}</h3>
+                </div>
+
+                <p class="project-description">{{ project.description }}</p>
+
+                <div class="project-tech">
+                    <span *ngFor="let tech of project.technologies" class="tech-tag hover-scale">{{ tech }}</span>
+                </div>
+
+                <div *ngIf="project.highlights && project.highlights.length > 0" class="project-highlights">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li *ngFor="let highlight of project.highlights">{{ highlight }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

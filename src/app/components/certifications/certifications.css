@@ -1,0 +1,68 @@
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.certifications-section,
+.awards-section {
+    margin-bottom: var(--spacing-3xl);
+}
+
+.subsection-title {
+    font-size: var(--font-size-2xl);
+    color: var(--color-primary-light);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.cert-grid,
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.cert-card,
+.award-card {
+    background: var(--color-bg-secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    text-align: center;
+    transition: all var(--transition-base);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cert-card:hover,
+.award-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-primary);
+}
+
+.cert-icon,
+.award-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.cert-card h4,
+.award-card h4 {
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+    margin: 0 0 var(--spacing-xs) 0;
+    line-height: 1.4;
+}
+
+.award-card p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+
+    .cert-grid,
+    .awards-grid {
+        grid-template-columns: 1fr;
+    }
+}

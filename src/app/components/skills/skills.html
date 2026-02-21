@@ -1,0 +1,20 @@
+<section id="skills" class="section">
+    <div class="container">
+        <h2 class="section-title scroll-reveal" scrollReveal>Skills & Technologies</h2>
+
+        <div class="skills-categories">
+            <div *ngFor="let category of categories; let i = index" class="skill-category scroll-reveal"
+                [class]="'stagger-' + (i + 1)" scrollReveal>
+                <h3 class="category-title">{{ category }}</h3>
+                <div class="skills-grid">
+                    <div *ngFor="let skill of getSkillsByCategory(category)" class="skill-card hover-lift">
+                        <div class="skill-name">{{ skill.name }}</div>
+                        <div class="skill-bar" *ngIf="skill.proficiency">
+                            <div class="skill-progress" [style.width.%]="skill.proficiency"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

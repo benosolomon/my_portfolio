@@ -1,0 +1,28 @@
+<section id="certifications" class="section">
+    <div class="container">
+        <h2 class="section-title">Certifications & Awards</h2>
+
+        <div class="content-wrapper">
+            <div class="certifications-section">
+                <h3 class="subsection-title">Certifications</h3>
+                <div class="cert-grid">
+                    <div *ngFor="let cert of certifications" class="cert-card">
+                        <div class="cert-icon">📜</div>
+                        <h4>{{ cert.title }}</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="awards-section">
+                <h3 class="subsection-title">Awards & Recognition</h3>
+                <div class="awards-grid">
+                    <div *ngFor="let award of awards" class="award-card">
+                        <div class="award-icon">🏆</div>
+                        <h4>{{ award.title }}</h4>
+                        <p *ngIf="award.description">{{ award.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

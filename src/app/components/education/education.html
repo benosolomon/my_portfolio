@@ -1,0 +1,15 @@
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Education</h2>
+
+        <div class="education-content">
+            <div *ngFor="let edu of education" class="education-card card">
+                <div class="education-icon">🎓</div>
+                <h3 class="degree">{{ edu.degree }}</h3>
+                <h4 class="institution">{{ edu.institution }}</h4>
+                <p class="duration">{{ edu.duration }}</p>
+                <span *ngIf="edu.distinction" class="distinction-badge">Graduated with Distinction</span>
+            </div>
+        </div>
+    </div>
+</section>

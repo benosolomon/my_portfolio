@@ -1,0 +1,59 @@
+<section id="home" class="hero">
+    <div class="hero-background">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <div class="container">
+        <div class="hero-content">
+            <p class="hero-greeting fade-in-down stagger-1">Hi, I'm</p>
+            <h1 class="hero-name scale-in stagger-2">{{ portfolioData.name }}</h1>
+            <h2 class="hero-title fade-in-up stagger-3">{{ portfolioData.title }}</h2>
+            <p class="hero-description fade-in-up stagger-4">
+                Passionate Full Stack Developer specializing in Angular and Node.js with expertise in AI/ML
+                technologies.
+                Creating innovative solutions that drive business value and enhance user experiences.
+            </p>
+
+            <div class="hero-cta fade-in-up stagger-5">
+                <a href="#contact" class="btn btn-primary hover-lift glow-animation">Get In Touch</a>
+                <a href="#projects" class="btn btn-outline hover-lift">View My Work</a>
+            </div>
+
+            <div class="hero-social fade-in-up stagger-6">
+                <a [href]="portfolioData.contact.linkedin" target="_blank" rel="noopener"
+                    class="social-link hover-scale">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+                <a [href]="'mailto:' + portfolioData.contact.email" class="social-link hover-scale">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z" />
+                    </svg>
+                </a>
+                <a [href]="portfolioData.contact.blog" target="_blank" rel="noopener" class="social-link hover-scale">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M6 0v24h12v-24h-12zm10 22h-8v-20h8v20zm-7-18h6v1h-6v-1zm0 2h6v1h-6v-1zm0 2h6v1h-6v-1zm0 2h6v1h-6v-1zm0 2h6v1h-6v-1z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-indicator bounce-animation">
+        <a href="#about">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M19 12l-7 7-7-7" />
+            </svg>
+        </a>
+    </div>
+</section>
